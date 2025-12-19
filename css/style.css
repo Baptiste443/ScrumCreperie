@@ -389,3 +389,106 @@ ul { list-style: none; }
     .social-links { justify-content: center; }
     .contact-info li { justify-content: center; }
 }
+/* --- PAGE EQUIPE & VALEURS --- */
+
+/* 1. Grille des Valeurs */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.value-card {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.3s;
+    border-top: 3px solid transparent;
+}
+
+.value-card:hover {
+    border-top-color: var(--secondary);
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.value-card h3 {
+    font-family: var(--font-tech);
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.value-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* 2. Grille de l'Équipe */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.team-member:hover {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
+}
+
+.member-photo {
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 210, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary);
+    border: 2px solid var(--border-glass);
+    flex-shrink: 0; /* Empêche la photo de s'écraser */
+}
+
+.member-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.role {
+    font-family: var(--font-tech);
+    color: var(--secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bio {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* Responsive Mobile pour l'équipe */
+@media (max-width: 600px) {
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+}
