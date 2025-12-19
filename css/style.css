@@ -162,3 +162,32 @@ ul { list-style: none; }
     .hero h1 { font-size: 2.5rem; }
     .news-form { flex-direction: column; }
 }
+
+/* --- PAGE CARTE SPECIFIQUE --- */
+
+/* Conteneur de l'image (Cadre style "Tech") */
+.menu-viewer {
+    display: inline-block;
+    padding: 1rem;
+    border: 1px solid var(--primary); /* Bordure bleue */
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.15); /* Lueur */
+    max-width: 100%; /* Ne dépasse jamais la largeur de l'écran */
+}
+
+/* L'image elle-même */
+.menu-img-full {
+    width: 100%;       /* Prend toute la largeur du conteneur */
+    max-width: 800px;  /* Largeur max pour pas que ce soit géant sur PC */
+    height: auto;      /* Garde les proportions */
+    border-radius: 4px;
+    display: block;
+}
+
+/* Petit effet au survol de la carte */
+.menu-viewer:hover {
+    border-color: var(--secondary); /* Devient orange au survol */
+    box-shadow: 0 0 30px rgba(255, 159, 67, 0.2);
+    transition: 0.3s ease;
+}
