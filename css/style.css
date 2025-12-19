@@ -191,3 +191,97 @@ ul { list-style: none; }
     box-shadow: 0 0 30px rgba(255, 159, 67, 0.2);
     transition: 0.3s ease;
 }
+/* --- PAGE ÉVÉNEMENTS --- */
+
+/* 1. Grille des événements */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.event-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border-radius: 8px;
+    gap: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+/* Badge Date (Carré style calendrier) */
+.date-badge {
+    background: rgba(255, 159, 67, 0.1);
+    color: var(--secondary);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--secondary);
+    min-width: 60px;
+}
+.date-badge .day { display: block; font-size: 1.5rem; font-weight: bold; line-height: 1; }
+.date-badge .month { font-size: 0.8rem; font-family: var(--font-tech); text-transform: uppercase; }
+
+.event-details h3 { margin: 5px 0; font-size: 1.2rem; }
+.tag { font-family: var(--font-tech); color: var(--primary); font-size: 0.8rem; }
+.btn-small {
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+.btn-small:hover { background: var(--primary); color: var(--bg-dark); }
+
+
+/* 2. Grille Vidéos (YouTube) */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.video-frame {
+    background: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-glass);
+}
+.video-info { padding: 1rem; }
+.video-info h4 { color: var(--primary); font-family: var(--font-tech); margin-bottom: 5px;}
+.video-info p { font-size: 0.9rem; color: #95a5a6; }
+
+
+/* 3. Section Récompenses */
+.awards-section { padding-bottom: 4rem; }
+.awards-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
+}
+
+.award-item { max-width: 200px; }
+.award-icon { font-size: 2.5rem; color: var(--secondary); margin-bottom: 10px; }
+.stars { color: #f1c40f; font-size: 0.8rem; margin: 5px 0; }
+.award-item h4 { font-weight: bold; font-size: 1.1rem; }
+.award-item p { font-size: 0.9rem; color: #95a5a6; }
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .event-card { flex-direction: column; align-items: center; text-align: center; }
+    .awards-grid { flex-direction: column; }
+}
