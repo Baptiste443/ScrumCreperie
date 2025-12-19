@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billig Data | Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar glass">
+        <div class="logo-container">
+            <img src="logo/logo.png" alt="Logo Billig Data" class="logo-img">
+            <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">/Accueil</a></li>
+            <li><a href="page/carte.html">/La_Carte</a></li>
+            <li><a href="page/event.html">/Événements</a></li>
+            <li><a href="#" onclick="openPopup()" class="btn-reserver">Réserver <i class="fa-solid fa-calendar-check"></i></a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="status-badge"><i class="fa-solid fa-wifi"></i> Connexion établie</span>
+            <h1>LA TRADITION <br><span class="highlight">ENCODÉE</span></h1>
+            <p class="subtitle">Dégustez nos galettes bretonnes compilées avec des produits frais et locaux.</p>
+            <div class="cta-group">
+                <a href="page/carte.html" class="btn-primary">Voir le Menu</a>
+                <a href="#newsletter" class="btn-secondary">Newsletter</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="section-header">
+            <h2><span class="slash">//</span> MENU DU JOUR</h2>
+        </div>
+        <div class="menu-widget glass">
+            <div class="widget-head">
+                <h3>FORMULE_MIDI.exe</h3>
+                <span class="price">14.90 €</span>
+            </div>
+            <div class="widget-body">
+                <ul class="menu-list">
+                    <li><i class="fa-solid fa-caret-right"></i> Bolée de Cidre ou Jus de Pomme</li>
+                    <li><i class="fa-solid fa-caret-right"></i> <strong>Galette Complète</strong> (Jambon, Œuf, Fromage)</li>
+                    <li><i class="fa-solid fa-caret-right"></i> Crêpe Beurre-Sucre</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="newsletter-section">
+        <div class="newsletter-box glass">
+            <i class="fa-solid fa-envelope-open-text icon-news"></i>
+            <h3>Rejoignez le Flux</h3>
+            <p>Recevez nos mises à jour et offres exclusives.</p>
+            <form action="#" class="news-form">
+                <input type="email" placeholder="votre@email.com" required>
+                <button type="submit">S'ABONNER</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="reservationPopup" class="popup-overlay">
+        <div class="popup-content glass">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Réserver une Table</h2>
+            <p>Sélectionnez vos paramètres de session.</p>
+            <form>
+                <input type="text" placeholder="Nom complet" required>
+                <input type="date" required>
+                <input type="number" placeholder="Nombre de personnes" min="1" required>
+                <button type="submit" class="btn-primary full-width">Valider la Réservation</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Billig Data • <a href="page/mentions.html">Mentions Légales</a></p>
+    </footer>
+
+    <script>
+        function openPopup() {
+            document.getElementById("reservationPopup").style.display = "flex";
+        }
+        function closePopup() {
+            document.getElementById("reservationPopup").style.display = "none";
+        }
+        // Fermer si on clique en dehors
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("reservationPopup")) {
+                closePopup();
+            }
+        }
+    </script>
+</body>
+</html>
