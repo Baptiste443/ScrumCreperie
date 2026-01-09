@@ -492,3 +492,32 @@ ul { list-style: none; }
         text-align: center;
     }
 }
+
+/* SWITCH LANGUE */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-tech);
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    font-family: var(--font-tech);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lang-btn:hover { color: var(--primary); }
+
+/* Classe ajoutée par le JS quand la langue est active */
+.active-lang {
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+    text-decoration: underline;
+}
