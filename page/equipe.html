@@ -11,18 +11,25 @@
 <body>
 
     <nav class="navbar glass">
-        <div class="logo-container">
-            <img src="../logo/logo.png" alt="Logo" class="logo-img">
-            <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="../index.html">/Accueil</a></li>
-            <li><a href="carte.html">/La_Carte</a></li>
-            <li><a href="event.html">/Événements</a></li>
-            <li><a href="#" class="active">/L'Équipe</a></li>
-            <li><a href="../index.html" class="btn-reserver">Réserver</a></li>
-        </ul>
-    </nav>
+    <div class="logo-container">
+        <img src="../logo/logo.png" alt="Logo" class="logo-img">
+        <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="../index.html" data-lang="nav_home">/Accueil</a></li>
+        <li><a href="carte.html" data-lang="nav_menu">/La_Carte</a></li>
+        <li><a href="event.html" data-lang="nav_events">/Événements</a></li>
+        <li><a href="equipe.html" data-lang="nav_team">/L'Équipe</a></li>
+        
+        <li class="lang-switch">
+            <button onclick="changeLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
+            <span>|</span>
+            <button onclick="changeLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+        </li>
+
+        <li><a href="../index.html" class="btn-reserver" data-lang="nav_book">Réserver</a></li>
+    </ul>
+</nav>
 
     <header class="hero" style="height: 40vh;">
         <div class="hero-content">

@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billig Data | Accueil</title>
+    
     <link rel="stylesheet" href="css/style.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <script src="js/lang.js" defer></script> 
-
-<nav class="navbar glass">
+    <nav class="navbar glass">
     <div class="logo-container">
-        </div>
+        <img src="logo/logo.png" alt="Logo" class="logo-img">
+        <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
+    </div>
     <ul class="nav-links">
-        <li><a href="index.html" data-lang="nav_home" class="active">/Accueil</a></li>
+        <li><a href="index.html" class="active" data-lang="nav_home">/Accueil</a></li>
         <li><a href="page/carte.html" data-lang="nav_menu">/La_Carte</a></li>
         <li><a href="page/event.html" data-lang="nav_events">/Événements</a></li>
         <li><a href="page/equipe.html" data-lang="nav_team">/L'Équipe</a></li>
@@ -27,29 +29,30 @@
             <button onclick="changeLanguage('en')" id="btn-en" class="lang-btn">EN</button>
         </li>
 
-        <li><a href="#" class="btn-reserver" data-lang="nav_book">Réserver</a></li>
+        <li><a href="#" class="btn-reserver" onclick="openPopup()" data-lang="nav_book">Réserver</a></li>
     </ul>
 </nav>
 
-<header class="hero">
-    <div class="hero-content">
-        <h1 data-lang="hero_title">LA TRADITION <br><span class="highlight">ENCODÉE</span></h1>
-        
-        <p class="subtitle" data-lang="hero_subtitle">
-            Dégustez nos galettes bretonnes compilées avec des produits frais et locaux.
-        </p>
-        
-        <div class="cta-group">
-            <a href="page/carte.html" class="btn-primary" data-lang="btn_menu">Voir le Menu</a>
-            <a href="#newsletter" class="btn-secondary" data-lang="btn_news">Newsletter</a>
+    <header class="hero">
+        <div class="hero-content">
+            <h1 data-lang="hero_title">LA TRADITION <br><span class="highlight">ENCODÉE</span></h1>
+            
+            <p class="subtitle" data-lang="hero_subtitle">
+                Dégustez nos galettes bretonnes compilées avec des produits frais et locaux.
+            </p>
+            
+            <div class="cta-group">
+                <a href="page/carte.html" class="btn-primary" data-lang="btn_menu">Voir le Menu</a>
+                <a href="#newsletter" class="btn-secondary" data-lang="btn_news">Newsletter</a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <section class="container">
         <div class="section-header">
-            <h2><span class="slash">//</span> MENU DU JOUR</h2>
+            <h2 data-lang="menu_title"><span class="slash">//</span> MENU DU JOUR</h2>
         </div>
+        
         <div class="menu-widget glass">
             <div class="widget-head">
                 <h3>FORMULE_MIDI.exe</h3>
@@ -92,65 +95,69 @@
     </div>
 
     <footer class="site-footer">
-    <div class="footer-content container">
-        
-        <div class="footer-col">
-            <div class="footer-logo">
-                <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
+        <div class="footer-content container">
+            
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
+                </div>
+                <p class="footer-desc">
+                    La première crêperie connectée de l'Ouest. 
+                    Sarrasin local, compilation maison et open-source.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
             </div>
-            <p class="footer-desc">
-                La première crêperie connectée de l'Ouest. 
-                Sarrasin local, compilation maison et open-source.
-            </p>
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
+    
+            <div class="footer-col">
+                <h4><i class="fa-solid fa-link"></i> Quick_Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">/Accueil (Home)</a></li>
+                    <li><a href="page/carte.html">/La_Carte (Menu)</a></li>
+                    <li><a href="page/event.html">/Événements (Logs)</a></li>
+                    <li><a href="#" onclick="openPopup()">/Réserver (Booking)</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h4><i class="fa-solid fa-server"></i> Server_Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> 19 Rue Eugène Messmer, 53000 Laval</li>
+                    <li><i class="fa-solid fa-phone"></i> 02 43 39 75 18</li>
+                    <li><i class="fa-solid fa-envelope"></i> contact@billig-data.bzh</li>
+                    <li class="hours"><i class="fa-solid fa-clock"></i> Mar-Sam : 12h-14h / 19h-22h</li>
+                </ul>
             </div>
         </div>
-
-        <div class="footer-col">
-            <h4><i class="fa-solid fa-link"></i> Quick_Links</h4>
-            <ul class="footer-links">
-                <li><a href="../index.html">/Accueil (Home)</a></li>
-                <li><a href="carte.html">/La_Carte (Menu)</a></li>
-                <li><a href="event.html">/Événements (Logs)</a></li>
-                <li><a href="#">/Réserver (Booking)</a></li>
-            </ul>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Billig Data. Tous droits réservés.</p>
+            <div class="legal-links">
+                <a href="page/mentions.html">Mentions Légales</a>
+                <span>|</span>
+                <span class="status"><span class="status-dot"></span> System Online</span>
+            </div>
         </div>
+    </footer>
 
-        <div class="footer-col">
-            <h4><i class="fa-solid fa-server"></i> Server_Info</h4>
-            <ul class="contact-info">
-                <li><i class="fa-solid fa-location-dot"></i> 19 Rue Eugène Messmer, 53000 Laval</li>
-                <li><i class="fa-solid fa-phone"></i> 02 43 39 75 18</li>
-                <li><i class="fa-solid fa-envelope"></i> contact@billig-data.bzh</li>
-                <li class="hours"><i class="fa-solid fa-clock"></i> Mar-Sam : 12h-14h / 19h-22h</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2024 Billig Data. Tous droits réservés.</p>
-        <div class="legal-links">
-            <a href="page/mentions.html">Mentions Légales</a>
-            <span>|</span>
-            <a href="#">Politique de Confidentialité</a>
-            <span>|</span>
-            <span class="status"><span class="status-dot"></span> System Online</span>
-        </div>
-    </div>
-</footer>
-
+    <script src="js/script.js"></script>
+    
     <script>
+        // Initialisation du site
+        // './' signifie qu'on est à la racine, donc le script saura trouver les images
+        initSite('./'); 
+
+        // Logique spécifique à la Popup de réservation
         function openPopup() {
             document.getElementById("reservationPopup").style.display = "flex";
         }
         function closePopup() {
             document.getElementById("reservationPopup").style.display = "none";
         }
-        // Fermer si on clique en dehors
         window.onclick = function(event) {
             if (event.target == document.getElementById("reservationPopup")) {
                 closePopup();

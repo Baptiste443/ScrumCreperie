@@ -514,6 +514,8 @@ ul { list-style: none; }
 }
 
 .lang-btn:hover { color: var(--primary); }
+.lang-switch { display: flex; gap: 5px; color: white; font-family: 'Fira Code', monospace; }
+.lang-btn { background: none; border: none; color: #7f8c8d; cursor: pointer; font-weight: bold; }
 
 /* Classe ajoutée par le JS quand la langue est active */
 .active-lang {

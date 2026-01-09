@@ -4,36 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billig Data | La Carte</title>
+    
     <link rel="stylesheet" href="../css/style.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar glass">
-        <div class="logo-container">
-            <img src="../logo/logo.png" alt="Logo" class="logo-img">
-            <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="../index.html">/Accueil</a></li>
-            <li><a href="#" class="active">/La_Carte</a></li>
-            <li><a href="event.html">/Événements</a></li>
-            <li><a href="#footer-contact" class="btn-reserver">Réserver</a></li>
-        </ul>
-    </nav>
+    <div class="logo-container">
+        <img src="../logo/logo.png" alt="Logo" class="logo-img">
+        <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="../index.html" data-lang="nav_home">/Accueil</a></li>
+        <li><a href="carte.html" data-lang="nav_menu">/La_Carte</a></li>
+        <li><a href="event.html" data-lang="nav_events">/Événements</a></li>
+        <li><a href="equipe.html" data-lang="nav_team">/L'Équipe</a></li>
+        
+        <li class="lang-switch">
+            <button onclick="changeLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
+            <span>|</span>
+            <button onclick="changeLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+        </li>
 
-    <header class="hero" style="height: 40vh;"> <div class="hero-content">
-            <h1>DATA_<span class="highlight">MENU</span></h1>
-            <p class="subtitle">Chargement du fichier source : carte.png</p>
+        <li><a href="../index.html" class="btn-reserver" data-lang="nav_book">Réserver</a></li>
+    </ul>
+</nav>
+
+    <header class="hero" style="height: 40vh;"> 
+        <div class="hero-content">
+            <h1 data-lang="carte_title">DATA_<span class="highlight">MENU</span></h1>
+            <p class="subtitle" data-lang="carte_subtitle">Chargement du fichier source : carte.png</p>
         </div>
     </header>
 
     <section class="container" style="text-align: center;">
         
         <div style="margin-bottom: 2rem;">
-            <a href="../logo/carte.png" download="Carte_Billig_Data" class="btn-secondary">
-                <i class="fa-solid fa-download"></i> Télécharger la Carte (PDF/PNG)
+            <a href="../logo/carte.png" download="Carte_Billig_Data" class="btn-secondary" data-lang="btn_download">
+                <i class="fa-solid fa-download"></i> Télécharger (PDF/PNG)
             </a>
         </div>
 
@@ -44,56 +55,60 @@
     </section>
 
     <footer class="site-footer">
-    <div class="footer-content container">
-        
-        <div class="footer-col">
-            <div class="footer-logo">
-                <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
+        <div class="footer-content container">
+            
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
+                </div>
+                <p class="footer-desc" data-lang="footer_desc">
+                    La première crêperie connectée de l'Ouest. 
+                    Sarrasin local, compilation maison et open-source.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
             </div>
-            <p class="footer-desc">
-                La première crêperie connectée de l'Ouest. 
-                Sarrasin local, compilation maison et open-source.
-            </p>
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
+    
+            <div class="footer-col">
+                <h4 data-lang="quick_links"><i class="fa-solid fa-link"></i> Quick_Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">/Accueil (Home)</a></li>
+                    <li><a href="carte.html">/La_Carte (Menu)</a></li>
+                    <li><a href="event.html">/Événements (Logs)</a></li>
+                    <li><a href="../index.html">/Réserver (Booking)</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-col">
+                <h4 data-lang="server_info"><i class="fa-solid fa-server"></i> Server_Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> 19 Rue Eugène Messmer, 53000 Laval</li>
+                    <li><i class="fa-solid fa-phone"></i> 02 43 39 75 18</li>
+                    <li><i class="fa-solid fa-envelope"></i> contact@billig-data.bzh</li>
+                    <li class="hours"><i class="fa-solid fa-clock"></i> Mar-Sam : 12h-14h / 19h-22h</li>
+                </ul>
             </div>
         </div>
-
-        <div class="footer-col">
-            <h4><i class="fa-solid fa-link"></i> Quick_Links</h4>
-            <ul class="footer-links">
-                <li><a href="../index.html">/Accueil (Home)</a></li>
-                <li><a href="carte.html">/La_Carte (Menu)</a></li>
-                <li><a href="event.html">/Événements (Logs)</a></li>
-                <li><a href="#">/Réserver (Booking)</a></li>
-            </ul>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Billig Data. Tous droits réservés.</p>
+            <div class="legal-links">
+                <a href="mentions.html">Mentions Légales</a>
+                <span>|</span>
+                <span class="status"><span class="status-dot"></span> System Online</span>
+            </div>
         </div>
+    </footer>
 
-        <div class="footer-col">
-            <h4><i class="fa-solid fa-server"></i> Server_Info</h4>
-            <ul class="contact-info">
-                <li><i class="fa-solid fa-location-dot"></i> 19 Rue Eugène Messmer, 53000 Laval</li>
-                <li><i class="fa-solid fa-phone"></i> 02 43 39 75 18</li>
-                <li><i class="fa-solid fa-envelope"></i> contact@billig-data.bzh</li>
-                <li class="hours"><i class="fa-solid fa-clock"></i> Mar-Sam : 12h-14h / 19h-22h</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2024 Billig Data. Tous droits réservés.</p>
-        <div class="legal-links">
-            <a href="mentions.html">Mentions Légales</a>
-            <span>|</span>
-            <a href="#">Politique de Confidentialité</a>
-            <span>|</span>
-            <span class="status"><span class="status-dot"></span> System Online</span>
-        </div>
-    </div>
-</footer>
+    <script src="../js/script.js"></script>
+    <script>
+        // On initialise le site en précisant qu'on est dans un sous-dossier ('../')
+        initSite('../'); 
+    </script>
 
 </body>
 </html>

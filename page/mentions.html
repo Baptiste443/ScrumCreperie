@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billig Data | Mentions Légales</title>
+    
     <link rel="stylesheet" href="../css/style.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar glass">
-        <div class="logo-container">
-            <img src="../logo/logo.png" alt="Logo" class="logo-img">
-            <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="../index.html">/Accueil</a></li>
-            <li><a href="carte.html">/La_Carte</a></li>
-            <li><a href="event.html">/Événements</a></li>
-            <li><a href="../index.html" class="btn-reserver">Réserver</a></li>
-        </ul>
-    </nav>
+    <div class="logo-container">
+        <img src="../logo/logo.png" alt="Logo" class="logo-img">
+        <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="../index.html" data-lang="nav_home">/Accueil</a></li>
+        <li><a href="carte.html" data-lang="nav_menu">/La_Carte</a></li>
+        <li><a href="event.html" data-lang="nav_events">/Événements</a></li>
+        <li><a href="equipe.html" data-lang="nav_team">/L'Équipe</a></li>
+        
+        <li class="lang-switch">
+            <button onclick="changeLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
+            <span>|</span>
+            <button onclick="changeLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+        </li>
+
+        <li><a href="../index.html" class="btn-reserver" data-lang="nav_book">Réserver</a></li>
+    </ul>
+</nav>
 
     <header class="hero" style="height: 30vh;">
         <div class="hero-content">
-            <h1>LEGAL_<span class="highlight">PROTOCOL</span></h1>
-            <p class="subtitle">Conditions générales d'utilisation du système.</p>
+            <h1 data-lang="legal_hero_title">LEGAL_<span class="highlight">PROTOCOL</span></h1>
+            <p class="subtitle" data-lang="legal_hero_subtitle">Conditions générales d'utilisation du système.</p>
         </div>
     </header>
 
@@ -34,7 +44,7 @@
         <div class="menu-widget glass" style="max-width: 800px; margin: 0 auto;">
             
             <div class="widget-head">
-                <h3><i class="fa-solid fa-scale-balanced"></i> Informations Éditeur</h3>
+                <h3 data-lang="legal_editor_title"><i class="fa-solid fa-scale-balanced"></i> Informations Éditeur</h3>
             </div>
             <div class="widget-body">
                 <p><strong>Propriétaire du site :</strong> SARL BILLIG DATA</p>
@@ -47,7 +57,7 @@
             <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 0;">
 
             <div class="widget-head">
-                <h3><i class="fa-solid fa-server"></i> Hébergement</h3>
+                <h3 data-lang="legal_hosting_title"><i class="fa-solid fa-server"></i> Hébergement</h3>
             </div>
             <div class="widget-body">
                 <p>Ce site est hébergé par un cluster de serveurs locaux alimentés au cidre.</p>
@@ -58,7 +68,7 @@
             <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 0;">
 
             <div class="widget-head">
-                <h3><i class="fa-solid fa-cookie-bite"></i> Politique de Cookies</h3>
+                <h3 data-lang="legal_cookies_title"><i class="fa-solid fa-cookie-bite"></i> Politique de Cookies</h3>
             </div>
             <div class="widget-body">
                 <p><strong>1. Cookies Techniques :</strong> Nécessaires au bon fonctionnement du code.</p>
@@ -68,7 +78,7 @@
             <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 0;">
 
             <div class="widget-head">
-                <h3><i class="fa-solid fa-database"></i> Données Personnelles (GDPR)</h3>
+                <h3 data-lang="legal_gdpr_title"><i class="fa-solid fa-database"></i> Données Personnelles (GDPR)</h3>
             </div>
             <div class="widget-body">
                 <p>Conformément au Règlement Général sur la Protection des Données :</p>
@@ -84,36 +94,58 @@
 
     <footer class="site-footer">
         <div class="footer-content container">
+            
             <div class="footer-col">
                 <div class="footer-logo">
                     <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
                 </div>
-                <p class="footer-desc">La première crêperie connectée de l'Ouest.</p>
+                <p class="footer-desc" data-lang="footer_desc">
+                    La première crêperie connectée de l'Ouest. 
+                    Sarrasin local, compilation maison et open-source.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
             </div>
+    
             <div class="footer-col">
-                <h4><i class="fa-solid fa-link"></i> Quick_Links</h4>
+                <h4 data-lang="quick_links"><i class="fa-solid fa-link"></i> Quick_Links</h4>
                 <ul class="footer-links">
-                    <li><a href="../index.html">/Accueil</a></li>
-                    <li><a href="carte.html">/La_Carte</a></li>
-                    <li><a href="event.html">/Événements</a></li>
+                    <li><a href="../index.html">/Accueil (Home)</a></li>
+                    <li><a href="carte.html">/La_Carte (Menu)</a></li>
+                    <li><a href="event.html">/Événements (Logs)</a></li>
+                    <li><a href="../index.html">/Réserver (Booking)</a></li>
                 </ul>
             </div>
+    
             <div class="footer-col">
-                <h4><i class="fa-solid fa-server"></i> Server_Info</h4>
+                <h4 data-lang="server_info"><i class="fa-solid fa-server"></i> Server_Info</h4>
                 <ul class="contact-info">
                     <li><i class="fa-solid fa-location-dot"></i> 19 Rue Eugène Messmer, 53000 Laval</li>
+                    <li><i class="fa-solid fa-phone"></i> 02 43 39 75 18</li>
                     <li><i class="fa-solid fa-envelope"></i> contact@billig-data.bzh</li>
+                    <li class="hours"><i class="fa-solid fa-clock"></i> Mar-Sam : 12h-14h / 19h-22h</li>
                 </ul>
             </div>
         </div>
+    
         <div class="footer-bottom">
-            <p>&copy; 2024 Billig Data.</p>
+            <p>&copy; 2024 Billig Data. Tous droits réservés.</p>
             <div class="legal-links">
-                <a href="#" class="active">Mentions Légales</a>
+                <a href="mentions.html">Mentions Légales</a>
+                <span>|</span>
                 <span class="status"><span class="status-dot"></span> System Online</span>
             </div>
         </div>
     </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        initSite('../'); 
+    </script>
 
 </body>
 </html>
