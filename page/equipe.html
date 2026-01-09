@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billig Data | Team & Valeurs</title>
+    <title>Billig Data | L'Équipe</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,100 +11,88 @@
 <body>
 
     <nav class="navbar glass">
-    <div class="logo-container">
-        <img src="../logo/logo.png" alt="Logo" class="logo-img">
-        <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
-    </div>
-    <ul class="nav-links">
-        <li><a href="../index.html" data-lang="nav_home">/Accueil</a></li>
-        <li><a href="carte.html" data-lang="nav_menu">/La_Carte</a></li>
-        <li><a href="event.html" data-lang="nav_events">/Événements</a></li>
-        <li><a href="equipe.html" data-lang="nav_team">/L'Équipe</a></li>
-        
-        <li class="lang-switch">
-            <button onclick="changeLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
-            <span>|</span>
-            <button onclick="changeLanguage('en')" id="btn-en" class="lang-btn">EN</button>
-        </li>
+        <div class="logo-container">
+            <img src="../logo/logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html" data-lang="nav_home">/Accueil</a></li>
+            <li><a href="carte.html" data-lang="nav_menu">/La_Carte</a></li>
+            <li><a href="event.html" data-lang="nav_events">/Événements</a></li>
+            <li><a href="equipe.html" data-lang="nav_team" class="active">/L'Équipe</a></li>
+            
+            <li class="lang-switch">
+                <button onclick="changeLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
+                <span>|</span>
+                <button onclick="changeLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+            </li>
 
-        <li><a href="../index.html" class="btn-reserver" data-lang="nav_book">Réserver</a></li>
-    </ul>
-</nav>
+            <li><a href="../index.html" class="btn-reserver" data-lang="nav_book">Réserver</a></li>
+        </ul>
+    </nav>
 
     <header class="hero" style="height: 40vh;">
         <div class="hero-content">
-            <h1>DEV_<span class="highlight">TEAM</span></h1>
-            <p class="subtitle">Les humains derrière l'algorithme culinaire.</p>
+            <h1 data-lang="team_hero_title">DEV_<span class="highlight">TEAM</span></h1>
+            <p class="subtitle" data-lang="team_hero_subtitle">Les humains derrière l'algorithme culinaire.</p>
         </div>
     </header>
 
     <section class="container">
         <div class="section-header">
-            <h2><span class="slash">//</span> NOTRE_KERNEL (Valeurs)</h2>
-            <p>Le code source de notre réussite.</p>
+            <h2 data-lang="values_title"><span class="slash">//</span> NOTRE_KERNEL (Valeurs)</h2>
+            <p data-lang="values_subtitle">Le code source de notre réussite.</p>
         </div>
 
         <div class="values-grid">
             <div class="value-card glass">
                 <i class="fa-solid fa-server value-icon"></i>
-                <h3>Sourcing "LocalHost"</h3>
-                <p>Pas de Cloud lointain. Tous nos ingrédients (farine, œufs, lait) proviennent de producteurs situés dans un rayon de 30km (Ping < 30ms).</p>
+                <h3 data-lang="val_1_title">Sourcing "LocalHost"</h3>
+                <p data-lang="val_1_desc">Pas de Cloud lointain. Tous nos ingrédients proviennent de producteurs situés dans un rayon de 30km (Ping < 30ms).</p>
             </div>
-
             <div class="value-card glass">
                 <i class="fa-brands fa-opensource value-icon"></i>
-                <h3>Cuisine Open Source</h3>
-                <p>Transparence totale. Notre cuisine est ouverte sur la salle. Vous pouvez vérifier le code (la recette) en temps réel.</p>
+                <h3 data-lang="val_2_title">Cuisine Open Source</h3>
+                <p data-lang="val_2_desc">Transparence totale. Notre cuisine est ouverte sur la salle. Vous pouvez vérifier le code (la recette) en temps réel.</p>
             </div>
-
             <div class="value-card glass">
                 <i class="fa-solid fa-users-gear value-icon"></i>
-                <h3>Service Agile</h3>
-                <p>Notre équipe s'adapte à vos besoins. Sprint rapide le midi, déploiement tranquille le soir pour une expérience utilisateur (UX) optimale.</p>
+                <h3 data-lang="val_3_title">Service Agile</h3>
+                <p data-lang="val_3_desc">Notre équipe s'adapte à vos besoins. Sprint rapide le midi, déploiement tranquille le soir pour une UX optimale.</p>
             </div>
         </div>
     </section>
 
     <section class="container">
         <div class="section-header">
-            <h2><span class="slash">//</span> LES_ADMINS (Staff)</h2>
+            <h2 data-lang="team_section_title"><span class="slash">//</span> LES_ADMINS (Staff)</h2>
         </div>
 
         <div class="team-grid">
-            
             <div class="team-member glass">
-                <div class="member-photo">
-                    <i class="fa-solid fa-user-astronaut"></i>
-                </div>
+                <div class="member-photo"><i class="fa-solid fa-user-astronaut"></i></div>
                 <div class="member-info">
-                    <span class="role">Lead Developer (Chef)</span>
+                    <span class="role" data-lang="role_1">Lead Developer (Chef)</span>
                     <h3>Loïc "Back-End"</h3>
-                    <p class="bio">Expert en architecture de Sarrasin. Compile des galettes sans bug depuis 15 ans.</p>
+                    <p class="bio" data-lang="bio_1">Expert en architecture de Sarrasin. Compile des galettes sans bug depuis 15 ans.</p>
                 </div>
             </div>
-
             <div class="team-member glass">
-                <div class="member-photo">
-                    <i class="fa-solid fa-user-ninja"></i>
-                </div>
+                <div class="member-photo"><i class="fa-solid fa-user-ninja"></i></div>
                 <div class="member-info">
-                    <span class="role">Product Owner (Gérante)</span>
+                    <span class="role" data-lang="role_2">Product Owner (Gérante)</span>
                     <h3>Elodie "SysAdmin"</h3>
-                    <p class="bio">Gère le backlog des commandes et s'assure que le serveur (et les serveurs) ne crash jamais.</p>
+                    <p class="bio" data-lang="bio_2">Gère le backlog des commandes et s'assure que le serveur (et les serveurs) ne crash jamais.</p>
                 </div>
             </div>
-
             <div class="team-member glass">
-                <div class="member-photo">
-                    <i class="fa-solid fa-robot"></i>
-                </div>
+                <div class="member-photo"><i class="fa-solid fa-robot"></i></div>
                 <div class="member-info">
-                    <span class="role">Interface Manager (Service)</span>
+                    <span class="role" data-lang="role_3">Interface Manager (Service)</span>
                     <h3>Théo "Front-End"</h3>
-                    <p class="bio">Responsable de l'UX client. Transmet les données (assiettes) avec une latence zéro.</p>
+                    <p class="bio" data-lang="bio_3">Responsable de l'UX client. Transmet les données (assiettes) avec une latence zéro.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -122,8 +110,7 @@
                 <div class="social-links">
                     <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://x.com/?lang=fr"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
     
@@ -157,10 +144,7 @@
             </div>
         </div>
     </footer>
-    <script src="../js/script.js"></script>
-    <script>
-        initSite('../'); 
-    </script>
 
+    <script src="../js/script.js"></script>
 </body>
 </html>
