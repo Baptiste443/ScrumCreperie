@@ -65,6 +65,7 @@ const translations = {
         award_2: "Recommandé 2024",
         award_3: "Coup de Cœur Geek",
 
+        // --- MENTIONS LEGALES ---
         legal_hero_title: "LEGAL_<span class='highlight'>PROTOCOL</span>",
         legal_hero_subtitle: "Conditions générales d'utilisation du système.",
         legal_editor_title: "<i class='fa-solid fa-scale-balanced'></i> Informations Éditeur",
@@ -142,6 +143,7 @@ const translations = {
         award_2: "Recommended 2024",
         award_3: "Geek's Choice Award",
 
+        // --- MENTIONS LEGALES EN ---
         legal_hero_title: "LEGAL_<span class='highlight'>PROTOCOL</span>",
         legal_hero_subtitle: "System Terms and Conditions.",
         legal_editor_title: "<i class='fa-solid fa-scale-balanced'></i> Publisher Info",
@@ -161,7 +163,8 @@ function changeLanguage(lang) {
     elements.forEach(element => {
         const key = element.getAttribute('data-lang');
         if (translations[lang] && translations[lang][key]) {
-            if (element.tagName === 'H1' || element.classList.contains('highlight')) {
+            // IMPORTANT : On autorise le HTML pour les H1 et les H3 (utilisés dans les mentions légales pour les icônes)
+            if (element.tagName === 'H1' || element.tagName === 'H3' || element.classList.contains('highlight')) {
                 element.innerHTML = translations[lang][key];
             } else {
                 element.innerText = translations[lang][key];
@@ -187,11 +190,13 @@ function changeLanguage(lang) {
 
 /* --- GESTION NOTATION (POPUP) --- */
 function openRating() {
-    document.getElementById("ratingPopup").style.display = "flex";
+    const popup = document.getElementById("ratingPopup");
+    if(popup) popup.style.display = "flex";
 }
 
 function closeRating() {
-    document.getElementById("ratingPopup").style.display = "none";
+    const popup = document.getElementById("ratingPopup");
+    if(popup) popup.style.display = "none";
 }
 
 function submitRating(event) {
@@ -202,17 +207,49 @@ function submitRating(event) {
     closeRating();
 }
 
-/* --- CLICK EN DEHORS POUR FERMER --- */
+/* --- CLICK EN DEHORS POUR FERMER LES POPUPS --- */
 window.onclick = function(event) {
     const ratePopup = document.getElementById("ratingPopup");
     const resPopup = document.getElementById("reservationPopup");
+    const mobileNav = document.querySelector(".mobile-nav");
+    const hamburger = document.querySelector(".hamburger");
     
+    // Fermeture Popups
     if (event.target == ratePopup) closeRating();
     if (event.target == resPopup) resPopup.style.display = "none";
+
+    // Fermeture Menu Mobile si on clique à côté
+    if (mobileNav && mobileNav.classList.contains('active') && !mobileNav.contains(event.target) && !hamburger.contains(event.target)) {
+        mobileNav.classList.remove("active");
+        hamburger.classList.remove("active");
+    }
 }
 
-/* --- DEMARRAGE --- */
+/* --- DEMARRAGE & LOGIQUE GLOBALE --- */
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Initialisation Langue
     const savedLang = localStorage.getItem('billig_lang') || 'fr';
     changeLanguage(savedLang);
+
+    // 2. Logique Menu Mobile (Hamburger)
+    const hamburger = document.querySelector(".hamburger");
+    const mobileNav = document.querySelector(".mobile-nav");
+
+    if (hamburger && mobileNav) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            mobileNav.classList.toggle("active");
+        });
+        
+        // Fermer le menu quand on clique sur un lien
+        const navLinks = document.querySelectorAll(".mobile-nav a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                mobileNav.classList.remove("active");
+            });
+        });
+    }
+
 });

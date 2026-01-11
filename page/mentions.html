@@ -10,38 +10,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-
-    <nav class="navbar glass">
-    <div class="logo-container">
-        <img src="../logo/logo.png" alt="Logo" class="logo-img">
-        <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
-    </div>
-    <ul class="nav-links">
-        <li><a href="../index.html" data-lang="nav_home">/Accueil</a></li>
-        <li><a href="carte.html" data-lang="nav_menu">/La_Carte</a></li>
-        <li><a href="event.html" data-lang="nav_events">/Événements</a></li>
-        <li><a href="equipe.html" data-lang="nav_team">/L'Équipe</a></li>
+<body class="sub-page"> <nav class="navbar glass">
+        <div class="logo-container">
+            <a href="../index.html" style="text-decoration: none; display: flex; align-items: center; color: inherit;">
+                <img src="../logo/logo.png" alt="Logo" class="logo-img">
+                <span class="logo-text">BILLIG_DATA<span class="dot">.</span></span>
+            </a>
+        </div>
         
-        <li class="lang-switch">
-            <button onclick="changeLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
-            <span>|</span>
-            <button onclick="changeLanguage('en')" id="btn-en" class="lang-btn">EN</button>
-        </li>
+        <ul class="nav-links">
+            <li><a href="../index.html" data-lang="nav_home">/Accueil</a></li>
+            <li><a href="carte.html" data-lang="nav_menu">/La_Carte</a></li>
+            <li><a href="event.html" data-lang="nav_events">/Événements</a></li>
+            <li><a href="equipe.html" data-lang="nav_team">/L'Équipe</a></li>
+            
+            <li class="lang-switch">
+                <button onclick="changeLanguage('fr')" id="btn-fr" class="lang-btn">FR</button>
+                <span>|</span>
+                <button onclick="changeLanguage('en')" id="btn-en" class="lang-btn">EN</button>
+            </li>
 
-        <li><a href="../index.html" class="btn-reserver" data-lang="nav_book">Réserver</a></li>
-    </ul>
-</nav>
+            <li><a href="../index.html#reservation" class="btn-reserver" data-lang="nav_book">Réserver</a></li>
+        </ul>
 
-    <header class="hero" style="height: 30vh;">
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="../index.html" data-lang="nav_home">/Accueil</a></li>
+            <li><a href="carte.html" data-lang="nav_menu">/La_Carte</a></li>
+            <li><a href="event.html" data-lang="nav_events">/Événements</a></li>
+            <li><a href="equipe.html" data-lang="nav_team">/L'Équipe</a></li>
+            <li><a href="../index.html#reservation" class="btn-reserver">Réserver</a></li>
+        </ul>
+    </div>
+
+    <header class="hero small-hero" style="height: 40vh; min-height: 300px;">
         <div class="hero-content">
             <h1 data-lang="legal_hero_title">LEGAL_<span class="highlight">PROTOCOL</span></h1>
             <p class="subtitle" data-lang="legal_hero_subtitle">Conditions générales d'utilisation du système.</p>
         </div>
     </header>
 
-    <section class="container">
-        <div class="menu-widget glass" style="max-width: 800px; margin: 0 auto;">
+    <section class="container section-padding">
+        <div class="menu-widget glass" style="max-width: 800px; margin: -50px auto 50px auto; position: relative; z-index: 2;">
             
             <div class="widget-head">
                 <h3 data-lang="legal_editor_title"><i class="fa-solid fa-scale-balanced"></i> Informations Éditeur</h3>
@@ -52,6 +69,7 @@
                 <p><strong>Capital social :</strong> 1024 € (Binary compliant)</p>
                 <p><strong>Directeur de la publication :</strong> Marc & L'Équipe</p>
                 <p><strong>Contact :</strong> admin@billig-data.bzh / 02 43 39 75 18</p>
+                <p><strong>SIRET :</strong> 404 000 000 000 (Not Found Corp)</p>
             </div>
 
             <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 0;">
@@ -61,8 +79,8 @@
             </div>
             <div class="widget-body">
                 <p>Ce site est hébergé par un cluster de serveurs locaux alimentés au cidre.</p>
-                <p><strong>Hébergeur :</strong> LocalHost Solutions</p>
-                <p><strong>Adresse :</strong> 127.0.0.1, Port 8080</p>
+                <p><strong>Hébergeur :</strong> GitHub Pages / LocalHost Solutions</p>
+                <p><strong>Adresse :</strong> Cloud Region: West-France</p>
             </div>
 
             <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 0;">
@@ -71,7 +89,7 @@
                 <h3 data-lang="legal_cookies_title"><i class="fa-solid fa-cookie-bite"></i> Politique de Cookies</h3>
             </div>
             <div class="widget-body">
-                <p><strong>1. Cookies Techniques :</strong> Nécessaires au bon fonctionnement du code.</p>
+                <p><strong>1. Cookies Techniques :</strong> Nécessaires au bon fonctionnement du code (Session ID).</p>
                 <p><strong>2. Cookies Gourmands :</strong> Nous utilisons uniquement du beurre salé. Aucun traceur publicitaire n'est installé sur votre navigateur sans votre consentement explicite (<code>sudo apt-get install cookies</code>).</p>
             </div>
 
@@ -83,7 +101,7 @@
             <div class="widget-body">
                 <p>Conformément au Règlement Général sur la Protection des Données :</p>
                 <ul style="margin-left: 20px; list-style: square; color: #94a3b8;">
-                    <li>Vos données de réservation sont cryptées.</li>
+                    <li>Vos données de réservation sont cryptées (SHA-256).</li>
                     <li>Aucune donnée n'est revendue à des tiers.</li>
                     <li>Vous disposez d'un droit d'accès, de rectification et de suppression (Droit à l'oubli numérique).</li>
                 </ul>
@@ -104,9 +122,9 @@
                     Sarrasin local, compilation maison et open-source.
                 </p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
     
@@ -116,7 +134,7 @@
                     <li><a href="../index.html">/Accueil (Home)</a></li>
                     <li><a href="carte.html">/La_Carte (Menu)</a></li>
                     <li><a href="event.html">/Événements (Logs)</a></li>
-                    <li><a href="../index.html">/Réserver (Booking)</a></li>
+                    <li><a href="equipe.html">/L'Équipe (Team)</a></li>
                 </ul>
             </div>
     
@@ -134,7 +152,7 @@
         <div class="footer-bottom">
             <p>&copy; 2024 Billig Data. Tous droits réservés.</p>
             <div class="legal-links">
-                <a href="mentions.html">Mentions Légales</a>
+                <a href="mentions.html" class="active">Mentions Légales</a>
                 <span>|</span>
                 <span class="status"><span class="status-dot"></span> System Online</span>
             </div>
